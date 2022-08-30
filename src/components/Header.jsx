@@ -6,7 +6,7 @@ function Header (props) {
     const {totalPrice} = useCart();
 
     return (
-        <header className="d-flex justify-between align-center p-40">
+        <header className="d-flex justify-between align-center ">
             <Link to="/">
                 <div className="d-flex align-center">
                         <img src="img/logo.png" alt="logo" width={40} height={40}/>
@@ -18,7 +18,7 @@ function Header (props) {
             </Link>
 
             <ul className="d-flex">
-                <li className="mr-30 cu-p" onClick={props.onOpenCart}>
+                <li className="cartHeader cu-p" onClick={props.onOpenCart}>
                     <img src="img/card.svg" alt="logo" width={20} height={20}/>
                     <span>{totalPrice} грн.</span>
                 </li>

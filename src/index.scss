@@ -22,6 +22,11 @@ body {
 
 header {
   border-bottom: 1px solid #eaeaea;
+  padding: 40px;
+
+  .cartHeader {
+    margin-right: 30px;
+  }
 
   img {
     margin-right: 15px;
@@ -199,6 +204,12 @@ header {
   }
 
   header {
+    padding: 30px 10px 20px 20px;
+
+    .cartHeader {
+      margin-right: 0;
+    }
+
     ul {
       flex-direction: column;
       gap: 10px;
