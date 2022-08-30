@@ -100,7 +100,7 @@ function App() {
                 <Drawer onClose={() => setCardOpened(false)} items={cartItems} onRemove={onRemoveItem} opened={cartOpened}/>
                 <Header onOpenCart={() => setCardOpened(true)}/>
                 <Routes>
-                    <Route path="" element={
+                    <Route path="/" element={
                         <Home
                             items={items}
                             searchValue={searchValue}
@@ -112,8 +112,8 @@ function App() {
                             isLoading={isLoading}
                         />
                     }/>
-                    <Route path="favorite" element={<Favorites />}/>
-                    <Route path="orders" element={<Orders />}/>
+                    <Route path="/favorite" element={<Favorites />}/>
+                    <Route path="/orders" element={<Orders />}/>
                 </Routes>
             </div>
       </AppContext.Provider>

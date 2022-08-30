@@ -22,7 +22,7 @@ export function Home ({items, setSearchValue, searchValue, onChangeSearch, onFav
 
     return (
         <div className="content p-40">
-            <div className="d-flex align-center justify-between mb-40">
+            <div className="d-flex align-center justify-between mb-40 header-page">
                 <h1>{searchValue ? `Поиск по запросу: "${searchValue}"` : 'Все кроссовки'}</h1>
                 <div className="search-block">
                     <img src="img/search.svg" alt="search"/>
@@ -31,7 +31,7 @@ export function Home ({items, setSearchValue, searchValue, onChangeSearch, onFav
                 </div>
             </div>
 
-            <div className="d-flex flex-wrap">
+            <div className="d-flex flex-wrap sneakers">
                 {renderItems()}
             </div>
         </div>

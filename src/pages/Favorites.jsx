@@ -11,7 +11,7 @@ export function Favorites () {
                 <h1>Мои закладки</h1>
             </div>
 
-            <div className="d-flex flex-wrap">
+            <div className="d-flex flex-wrap sneakers">
                 {favorites.map((item, index) => (
                         <Card
                             key={index}

@@ -26,7 +26,7 @@ export function Orders () {
                 <h1>Мои заказы</h1>
             </div>
 
-            <div className="d-flex flex-wrap">
+            <div className="d-flex flex-wrap sneakers">
                 {(
                     isLoading
                         ? [...Array(8)]
