@@ -25,8 +25,8 @@ export function Home ({items, setSearchValue, searchValue, onChangeSearch, onFav
             <div className="d-flex align-center justify-between mb-40">
                 <h1>{searchValue ? `Поиск по запросу: "${searchValue}"` : 'Все кроссовки'}</h1>
                 <div className="search-block">
-                    <img src="/img/search.svg" alt="search"/>
-                    {searchValue && <img onClick={() => setSearchValue('')} src="/img/btn-removed.svg" alt="Clear" className="cu-p clear"/> }
+                    <img src="img/search.svg" alt="search"/>
+                    {searchValue && <img onClick={() => setSearchValue('')} src="img/btn-removed.svg" alt="Clear" className="cu-p clear"/> }
                     <input type="text" placeholder="Поиск..." value={searchValue} onChange={onChangeSearch}/>
                 </div>
             </div>

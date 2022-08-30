@@ -40,7 +40,7 @@ export function Drawer({onClose, onRemove, items = [], opened}) {
     return (
         <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ''}`}>
             <div className={styles.drawer}>
-                <h2 className="mb-30 d-flex justify-between">Корзина <img src="/img/btn-removed.svg" alt="Close"
+                <h2 className="mb-30 d-flex justify-between">Корзина <img src="img/btn-removed.svg" alt="Close"
                                                                           onClick={onClose} className="removeBtn cu-p"/>
                 </h2>
                 {
@@ -55,7 +55,7 @@ export function Drawer({onClose, onRemove, items = [], opened}) {
                                                 <p className="mb-5">{obj.title}</p>
                                                 <b>{obj.price} грн.</b>
                                             </div>
-                                            <img src="/img/btn-removed.svg" alt="Remove" className="removeBtn"
+                                            <img src="img/btn-removed.svg" alt="Remove" className="removeBtn"
                                                  onClick={() => onRemove(obj.id)}/>
                                         </div>
                                     ))}
@@ -73,7 +73,7 @@ export function Drawer({onClose, onRemove, items = [], opened}) {
                                             <b>{(totalPrice / 100 * 5).toFixed(2)} грн.</b>
                                         </li>
                                     </ul>
-                                    <button disabled={isLoading} className='greenButton' onClick={handleClickComplete}>Оформить заказ <img src="/img/arrow.svg" alt="arrow"/>
+                                    <button disabled={isLoading} className='greenButton' onClick={handleClickComplete}>Оформить заказ <img src="img/arrow.svg" alt="arrow"/>
                                     </button>
                                 </div>
                             </>
@@ -82,7 +82,7 @@ export function Drawer({onClose, onRemove, items = [], opened}) {
                             <Info
                                 title={isComplete ? "Заказ оформлен!" : 'Корзина пустая'}
                                 description={isComplete ? `Ваш заказ #${orderId} скоро будет передан курьерской доставке` : 'Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.'}
-                                image={isComplete ? '/img/order-complete.jpg' : '/img/empty-cart.png'}
+                                image={isComplete ? 'img/order-complete.jpg' : 'img/empty-cart.png'}
                             />
                           )
                 }
