@@ -1,6 +1,9 @@
+import { useState } from "react";
 import Card from "../components/Card";
 
 export function Home ({items, setSearchValue, searchValue, onChangeSearch, onFavorite, onAddToCart, isLoading}) {
+
+    const [sorting, setSorting] = useState(true);
 
     const renderItems = () => {
         const filterItems = items.filter(item => item.title.toLowerCase().includes(searchValue.toLowerCase()));
@@ -8,7 +11,7 @@ export function Home ({items, setSearchValue, searchValue, onChangeSearch, onFav
        return (
            isLoading
             ? [...Array(8)]
-            : filterItems)
+            : (sorting ? filterItems : filterItems.sort((a, b) => a.price - b.price)))
             .map((item, index) => (
                 <Card
                     key={index}
@@ -29,7 +32,9 @@ export function Home ({items, setSearchValue, searchValue, onChangeSearch, onFav
                     {searchValue && <img onClick={() => setSearchValue('')} src="img/btn-removed.svg" alt="Clear" className="cu-p clear"/> }
                     <input type="text" placeholder="Поиск..." value={searchValue} onChange={onChangeSearch}/>
                 </div>
+                
             </div>
+            <div className="sortByPrice" onClick={() => setSorting(!sorting)}>{sorting ? "Сортування за ціною" : "Повернути"}</div>
 
             <div className="d-flex flex-wrap sneakers">
                 {renderItems()}

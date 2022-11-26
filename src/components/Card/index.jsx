@@ -43,7 +43,7 @@ function Card({img, id, title ,price, onClickFav, onClickPlus, favorited = false
                         <h5>{title}</h5>
                         <div className="d-flex justify-between align-center">
                             <div className="d-flex flex-column">
-                                <span>Цена:</span>
+                                <span>Ціна:</span>
                                 <b>{price} грн.</b>
                             </div>
                             {onClickPlus && <img className={styles.plus}

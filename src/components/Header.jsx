@@ -11,8 +11,8 @@ function Header (props) {
                 <div className="d-flex align-center">
                         <img src="img/logo.png" alt="logo" width={40} height={40}/>
                         <div className="headerInfo">
-                            <h3 className="text-uppercase">React sneakers</h3>
-                            <p>Магазин лучших кроссовок</p>
+                            <h3 className="text-uppercase">BM sneakers</h3>
+                            <p>Магазин найкращих кросівок</p>
                         </div>
                 </div>
             </Link>

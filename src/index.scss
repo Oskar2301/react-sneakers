@@ -225,3 +225,21 @@ header {
     gap: 1rem
   }
 }
+
+.sortByPrice {
+  background-color: #e7f6ff;
+  width: 220px;
+  text-align: center;
+  padding: 8px 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: black;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &:hover {
+    opacity: .9;
+    transform: scale(1.05);
+  }
+}

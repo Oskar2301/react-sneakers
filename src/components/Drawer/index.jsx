@@ -40,7 +40,7 @@ export function Drawer({onClose, onRemove, items = [], opened}) {
     return (
         <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ''}`}>
             <div className={styles.drawer}>
-                <h2 className="mb-30 d-flex justify-between">Корзина <img src="img/btn-removed.svg" alt="Close"
+                <h2 className="mb-30 d-flex justify-between">Кошик <img src="img/btn-removed.svg" alt="Close"
                                                                           onClick={onClose} className="removeBtn cu-p"/>
                 </h2>
                 {
@@ -63,7 +63,7 @@ export function Drawer({onClose, onRemove, items = [], opened}) {
                                 <div className="cartTotalBlock">
                                     <ul>
                                         <li>
-                                            <span>Итого:</span>
+                                            <span>Разом:</span>
                                             <div></div>
                                             <b>{totalPrice} грн.</b>
                                         </li>
@@ -73,15 +73,15 @@ export function Drawer({onClose, onRemove, items = [], opened}) {
                                             <b>{(totalPrice / 100 * 5).toFixed(2)} грн.</b>
                                         </li>
                                     </ul>
-                                    <button disabled={isLoading} className='greenButton' onClick={handleClickComplete}>Оформить заказ <img src="img/arrow.svg" alt="arrow"/>
+                                    <button disabled={isLoading} className='greenButton' onClick={handleClickComplete}>Оформити замовлення <img src="img/arrow.svg" alt="arrow"/>
                                     </button>
                                 </div>
                             </>
                         )
                         : (
                             <Info
-                                title={isComplete ? "Заказ оформлен!" : 'Корзина пустая'}
-                                description={isComplete ? `Ваш заказ #${orderId} скоро будет передан курьерской доставке` : 'Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.'}
+                                title={isComplete ? "Замовлення оформлено!" : 'Кошик пустий'}
+                                description={isComplete ? `Ваше замовлення #${orderId} скоро буде передано кур'єрській доставці` : 'Додати хоча б одну пару кросівок, щоб зробити замовлення.'}
                                 image={isComplete ? 'img/order-complete.jpg' : 'img/empty-cart.png'}
                             />
                           )
